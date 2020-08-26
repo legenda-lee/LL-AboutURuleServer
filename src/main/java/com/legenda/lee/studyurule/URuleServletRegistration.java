@@ -17,9 +17,8 @@ import javax.servlet.http.HttpServlet;
 public class URuleServletRegistration {
 
     @Bean
-    public ServletRegistrationBean<URuleServlet> registerURuleServlet()
-    {
-        return new ServletRegistrationBean(new URuleServlet(), new String[] { "/urule/*" });
+    public ServletRegistrationBean<HttpServlet> registerURuleServlet(){
+        return new ServletRegistrationBean<HttpServlet>(new URuleServlet(),"/urule/*");
     }
 
 }

@@ -22,17 +22,8 @@ import javax.sql.DataSource;
  * 在其中通过下面的代码导入urule-console-context.xml文件
  */
 @Configuration
-@ImportResource({"classpath:urule-console-context.xml"})
-@PropertySource(value = {"classpath:urule-console-context.properties"})
 public class DBConfig {
 
-    @Bean
-    public PropertySourcesPlaceholderConfigurer propertySourceLoader() {
-        PropertySourcesPlaceholderConfigurer configurer = new PropertySourcesPlaceholderConfigurer();
-        configurer.setIgnoreUnresolvablePlaceholders(true);
-        configurer.setOrder(1);
-        return configurer;
-    }
 
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource")
