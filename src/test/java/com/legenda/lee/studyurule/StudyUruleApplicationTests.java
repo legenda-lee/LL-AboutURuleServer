@@ -75,7 +75,7 @@ class StudyUruleApplicationTests {
     void test5() throws Exception {
         RepositoryService knowledgeService = (RepositoryService) Utils.getApplicationContext().getBean(RepositoryService.BEAN_ID);
 
-        List<RepositoryFile> repositoryFiles = knowledgeService.loadProjects("www.91jkys.com");
+        List<RepositoryFile> repositoryFiles = knowledgeService.loadProjects("");
         System.out.println("abc");
     }
 
